@@ -2,74 +2,93 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SexyHub Premium</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Seção Apresentação -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Bem-vindo à SexyHub</h1>
-        <p>Conectamos você com modelos reais e exclusivas, com atendimento direto via WhatsApp. Conteúdos personalizados com total privacidade.</p>
-        <a href="#como-funciona" class="btn-cta">Como Funciona</a>
+
+  <!-- Primeira seção -->
+  <section id="inicio" class="inicio">
+    <div class="inicio-conteudo">
+      <div class="texto">
+        <h1>Bem-vindo à SexyHub Premium</h1>
+        <p>
+          A SexyHub conecta você diretamente com atendentes especializadas, para
+          que você possa comprar packs exclusivos com total segurança e privacidade.
+        </p>
+        <p>
+          Aqui, o foco é no cliente — você conversa com uma atendente que vai
+          entender exatamente o que quer e ajudar na compra.
+        </p>
+        <button onclick="document.getElementById('como-funciona').scrollIntoView({ behavior: 'smooth' });">
+          Como funciona
+        </button>
       </div>
-      <div class="hero-img">
-        <img src="https://images.unsplash.com/photo-1550583724-b2691abb014e?auto=format&fit=crop&w=800&q=80" alt="Modelo destaque SexyHub">
+      <div class="imagem">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" alt="Modelo SexyHub" />
+        <div class="sombra"></div>
       </div>
     </div>
   </section>
 
-  <!-- Seção Como Funciona -->
-  <section class="como-funciona" id="como-funciona">
-    <h2>Como Funciona</h2>
-    <p>Nosso processo é simples, seguro e direto. Após escolher uma modelo, você será atendido via WhatsApp por nossa equipe e terá acesso aos conteúdos disponíveis.</p>
-    <ul>
-      <li>📱 Atendimento 100% humano via WhatsApp</li>
-      <li>🔞 Packs personalizados e exclusivos</li>
-      <li>🔐 Garantia de privacidade</li>
-    </ul>
+  <!-- Segunda seção - Como funciona -->
+  <section id="como-funciona" class="como-funciona">
+    <h2>Como Funciona a SexyHub</h2>
+    <p>
+      Após entrar em contato via WhatsApp, nossa atendente dedicada vai apresentar
+      as opções de packs das modelos disponíveis, tirar suas dúvidas e garantir
+      um atendimento personalizado.
+    </p>
+    <p>
+      Você escolhe o conteúdo que deseja, faz a compra diretamente com a atendente,
+      e recebe tudo de forma rápida, segura e discreta.
+    </p>
   </section>
 
   <!-- Seção Modelos em Destaque -->
-  <section class="modelos-destaque">
-    <h2>Modelos em Destaque</h2>
-    <div class="modelo-cards">
-      <div class="modelo">
-        <img src="https://images.unsplash.com/photo-1593113598332-58f69e2a3a1f?auto=format&fit=crop&w=800&q=80" alt="Modelo Gabriela">
-        <h3>Gabriela</h3>
-        <p>🔥 Conteúdos ousados e atendimento rápido.</p>
+  <section id="modelo-destaque" class="modelo-destaque">
+    <h2>Modelos em Destaque da SexyHub</h2>
+    <div class="modelo-container">
+      <div class="modelo-card">
+        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=500&q=80" alt="Marina Joyce" />
+        <h3>Marina Joyce</h3>
+        <p>Conhecida por seu carisma e conteúdo exclusivo, Marina encanta nossos clientes com sua autenticidade.</p>
       </div>
-      <div class="modelo">
-        <img src="https://images.unsplash.com/photo-1601039641089-87370f6ae886?auto=format&fit=crop&w=800&q=80" alt="Modelo Camila">
-        <h3>Camila</h3>
-        <p>👠 Fetiches, fantasias e muito mais no privado.</p>
+      <div class="modelo-card">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=500&q=80" alt="Laura Mendes" />
+        <h3>Laura Mendes</h3>
+        <p>Com um estilo único, Laura traz conteúdos sensuais e uma conexão verdadeira com os fãs.</p>
       </div>
-      <div class="modelo">
-        <img src="https://images.unsplash.com/photo-1611162617213-3f39ecf29b26?auto=format&fit=crop&w=800&q=80" alt="Modelo Lara">
-        <h3>Lara</h3>
-        <p>💋 Pack completo com vídeos e fotos exclusivas.</p>
+      <div class="modelo-card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80" alt="Isabela Rosa" />
+        <h3>Isabela Rosa</h3>
+        <p>Isabela destaca-se pelo profissionalismo e qualidade dos seus packs exclusivos.</p>
       </div>
     </div>
   </section>
 
   <!-- Seção FAQ -->
-  <section class="faq">
-    <h2>Dúvidas Frequentes</h2>
+  <section id="faq" class="faq">
+    <h2>Perguntas Frequentes</h2>
     <div class="faq-item">
-      <h4>Como faço para comprar?</h4>
-      <p>Basta clicar no botão de atendimento e falar diretamente com nossa equipe via WhatsApp. Você verá as opções disponíveis e poderá escolher com segurança.</p>
+      <h3>Como faço para comprar um pack?</h3>
+      <p>Basta entrar em contato com nossa atendente via WhatsApp pelo botão que está na página inicial.</p>
     </div>
     <div class="faq-item">
-      <h4>É seguro?</h4>
-      <p>Sim. Todo o processo é feito com total privacidade e sigilo. Você só paga após ver as opções e confirmar sua escolha.</p>
+      <h3>É seguro comprar pela SexyHub?</h3>
+      <p>Sim! Todas as negociações são feitas diretamente com nossas atendentes, garantindo privacidade e segurança.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Quais formas de pagamento são aceitas?</h3>
+      <p>A atendente irá te informar as opções disponíveis no momento do contato.</p>
     </div>
   </section>
 
   <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 SexyHub Premium — Todos os direitos reservados.</p>
+    <p>© 2025 SexyHub Premium - Todos os direitos reservados.</p>
   </footer>
+
 </body>
 </html>
