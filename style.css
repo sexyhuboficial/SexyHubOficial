@@ -15,34 +15,32 @@ body {
 
 /* Seções */
 section {
-  padding: 40px 0;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 h1, h2 {
-  color: #e91e63;
+  color: #e91e63; /* Rosa destaque */
   text-align: center;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
 }
 
 p {
-  color: #ccc;
   margin-bottom: 1rem;
-  font-size: 1rem;
+  color: #ccc;
 }
 
 button {
-  background-color: #e91e63;
+  background-color: #e91e63; /* Rosa */
   color: #fff;
   border: none;
-  padding: 12px;
+  padding: 12px 20px;
   border-radius: 6px;
-  width: 100%;
-  font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
-  margin-top: 1rem;
 }
+
 
 button:hover {
   background-color: #c2185b;
