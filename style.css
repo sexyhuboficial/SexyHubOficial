@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
   margin: 0;
   padding: 0;
@@ -49,10 +49,15 @@ button:hover {
 /* Primeira seção */
 .inicio-conteudo {
   display: flex;
+   align-items: center;
   flex-direction: column;
+   justify-content: space-between;
+   flex-wrap: auto;
   gap: 1.5rem;
 }
-
+.inicio .texto {
+  flex: 1;
+}
 .inicio .imagem {
   position: relative;
   border-radius: 12px;
@@ -62,6 +67,7 @@ button:hover {
 .inicio .imagem img {
   width: 100%;
   display: block;
+   border-radius: 12px;
 }
 
 .inicio .sombra {
@@ -71,9 +77,9 @@ button:hover {
   width: 100%;
   height: 100%;
   background: linear-gradient(to top, #000, transparent);
+  border-radius: 12px;
 }
 
-/* Carrossel de modelos */
 .modelo-carrossel {
   display: flex;
   overflow-x: auto;
@@ -83,15 +89,20 @@ button:hover {
   padding-bottom: 10px;
 }
 
+
+
 .modelo-card {
   background-color: #111;
-  flex: 0 0 auto;
-  width: 70%;
-  min-width: 250px;
+  padding: 20px;
   border-radius: 12px;
+  width: 300px;
   text-align: center;
-  scroll-snap-align: start;
-  padding: 12px;
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.modelo-card:hover {
+  transform: translateY(-5px);
 }
 
 .modelo-card img {
@@ -102,34 +113,63 @@ button:hover {
   margin-bottom: 8px;
 }
 
+/* Mobile - scroll horizontal */
+@media (max-width: 768px) {
+  .modelo-carrossel {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 10px;
+  }
+ .modelo-card {
+    scroll-snap-align: start;
+    width: 80%;
+    min-width: 250px;
+    margin-right: 1rem;
+  }
+}
 /* FAQ */
 .faq-item {
   background-color: #111;
-  border-radius: 8px;
   margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .faq-question {
   background: #222;
   color: #fff;
-  padding: 12px;
+  padding: 15px 20px;
   width: 100%;
-  text-align: left;
-  font-size: 1rem;
-  border: none;
   display: flex;
   justify-content: space-between;
+  border: none;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 .faq-answer {
+  padding: 0 20px 15px;
   display: none;
-  padding: 12px;
   color: #ccc;
 }
 
 .faq-answer.open {
   display: block;
+}
+
+/* Animação fade-in */
+.section-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.section-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Rodapé */
@@ -139,5 +179,4 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
-  border-top: 1px solid #222;
 }
