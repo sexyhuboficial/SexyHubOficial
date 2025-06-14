@@ -1,7 +1,13 @@
-// Seleciona todos os botões das perguntas FAQ
-const faqButtons = document.querySelectorAll('.faq-question');
+// Menu hambúrguer toggle
+const hamburguer = document.querySelector('.hamburguer');
+const navLinks = document.querySelector('.nav-links');
 
-faqButtons.forEach(button => {
+hamburguer.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// FAQ toggle
+document.querySelectorAll('.faq-question').forEach(button => {
   button.addEventListener('click', () => {
     const answer = button.nextElementSibling; // próxima div com a resposta
 
@@ -19,3 +25,20 @@ faqButtons.forEach(button => {
     }
   });
 });
+
+// Fade-in animation ao scroll
+function revealSections() {
+  const sections = document.querySelectorAll('.section-animate');
+  const windowHeight = window.innerHeight;
+  const revealPoint = 150;
+
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if (sectionTop < windowHeight - revealPoint) {
+      section.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealSections);
+window.addEventListener('load', revealSections);
