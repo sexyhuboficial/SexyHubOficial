@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +12,63 @@ body {
   padding: 0 16px;
 }
 
+/* Menu navegação */
+header {
+  position: sticky;
+  top: 0;
+  background: #111;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e91e63;
+  cursor: default;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #e91e63;
+}
+
+/* Hamburger menu - escondido no desktop */
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburguer span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
 /* Seções */
 section {
   padding: 60px 20px;
@@ -20,7 +76,8 @@ section {
   margin: auto;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #e91e63; /* Rosa destaque */
   text-align: center;
   margin-bottom: 1rem;
@@ -41,7 +98,6 @@ button {
   transition: background 0.3s ease;
 }
 
-
 button:hover {
   background-color: #c2185b;
 }
@@ -49,15 +105,17 @@ button:hover {
 /* Primeira seção */
 .inicio-conteudo {
   display: flex;
-   align-items: center;
+  align-items: center;
   flex-direction: column;
-   justify-content: space-between;
-   flex-wrap: auto;
+  justify-content: space-between;
+  flex-wrap: auto;
   gap: 1.5rem;
 }
+
 .inicio .texto {
   flex: 1;
 }
+
 .inicio .imagem {
   position: relative;
   border-radius: 12px;
@@ -67,7 +125,7 @@ button:hover {
 .inicio .imagem img {
   width: 100%;
   display: block;
-   border-radius: 12px;
+  border-radius: 12px;
 }
 
 .inicio .sombra {
@@ -88,8 +146,6 @@ button:hover {
   -webkit-overflow-scrolling: touch;
   padding-bottom: 10px;
 }
-
-
 
 .modelo-card {
   background-color: #111;
@@ -123,13 +179,38 @@ button:hover {
     gap: 1rem;
     padding-bottom: 10px;
   }
- .modelo-card {
+  .modelo-card {
     scroll-snap-align: start;
     width: 80%;
     min-width: 250px;
     margin-right: 1rem;
   }
+
+  /* Menu mobile */
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    background: #111;
+    height: calc(100vh - 60px);
+    width: 220px;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.8);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburguer {
+    display: flex;
+  }
 }
+
 /* FAQ */
 .faq-item {
   background-color: #111;
@@ -179,4 +260,45 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
+}
+/* Provas Sociais - Carrossel com duas linhas */
+.prova-carrossel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+
+.prova-card {
+  background-color: #111;
+  padding: 10px;
+  border-radius: 8px;
+  width: 180px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.prova-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .prova-carrossel {
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-columns: 150px;
+    overflow-x: scroll;
+  }
+  .prova-card {
+    width: 150px;
+  }
+  .prova-card img {
+    height: 100px;
+  }
 }
