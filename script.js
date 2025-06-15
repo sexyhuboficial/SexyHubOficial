@@ -9,13 +9,12 @@ hamburguer.addEventListener('click', () => {
 // FAQ toggle
 document.querySelectorAll('.faq-question').forEach(button => {
   button.addEventListener('click', () => {
-    const answer = button.nextElementSibling; // próxima div com a resposta
+    const answer = button.nextElementSibling; // div com a resposta
+    const icon = button.querySelector('.faq-icon');
 
     // Alterna classe para mostrar ou esconder a resposta
     answer.classList.toggle('active');
 
-    // Alterna o ícone + / -
-    const icon = button.querySelector('.faq-icon');
     if (answer.classList.contains('active')) {
       icon.textContent = '−'; // menos
       answer.style.maxHeight = answer.scrollHeight + 'px'; // anima expandindo
